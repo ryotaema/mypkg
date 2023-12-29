@@ -6,11 +6,19 @@ import rclpy
 from rclpy.node import Node
 from std_msgs.msg import Int16
 
-def cb(msg):
-    global node
-    node.get_logger().info("Listen: %d" % msg.data)
+class Listener(Node):
+    def __init__(self):
+        super().__init__('listen_node')
+        self.pub = self.create_subscription(Int16,"countup",self.cb, 10)
+    def cb(self,msg):
+        self.get_logger().info("Listen: %d  aaa" %msg.data)
 
-rclpy.init()
-node = Node("listener")
-pub =node.create_subscription(Int16,"countup",cb, 10)
-rclpy.spin(node)
+def main():
+    rclpy.init()
+    listen = Listener()
+    rclpy.spin(listen)
+    listen.destory_node()
+    rclpy.shutdown()
+
+if __name__ == '__main__':
+    main()
