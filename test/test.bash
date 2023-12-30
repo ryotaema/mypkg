@@ -13,5 +13,5 @@ cd src/mypkg
 cat ./inputs.txt | while read input
 (ros2 launch mypkg talk_listen.launch.py < $input ) > /tmp/mypkg.log
 
-cat /tmp/mypkg.log |
-grep 'Listen: 4'
+{cat /tmp/mypkg.log |
+grep 'Listen: 4'}
