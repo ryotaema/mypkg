@@ -10,10 +10,9 @@ colcon build
 source $dir/.bashrc
 
 cd src/mypkg
-cat /inputs.txt | while read input
-do
-{(ros2 launch mypkg talk_listen.launch.py < $input ) > /tmp/mypkg.log}
-done
+#cat /inputs.txt | while read input
+{(ros2 launch mypkg talk_listen.launch.py < $inputs.txt ) > /tmp/mypkg.log}
+
 
 cd ../..
 
