@@ -11,7 +11,7 @@ source $dir/.bashrc
 
 #chdir("/src/mypkg/") # views.py's direcotory
 cd src/mypkg
-input = `inputs.txt`
+input = `cat ./inputs.txt`
 (ros2 launch mypkg talk_listen.launch.py < "${input}" ) > /tmp/mypkg.log
 
 
