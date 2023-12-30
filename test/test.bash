@@ -10,10 +10,10 @@ colcon build
 source $dir/.bashrc
 
 cd src/mypkg
-# cat inputs.txt | read inpu
-inpu = cat inputs.txt
+# cat inputs.txt | read INPUT
+INPUT = cat inputs.txt
 cd ../..
-(ros2 launch mypkg talk_listen.launch.py < $inpu ) > /tmp/mypkg.log
+(ros2 launch mypkg talk_listen.launch.py < $INPUT ) > /tmp/mypkg.log
 
 cat /tmp/mypkg.log |
 grep 'Listen: 1'
