@@ -11,7 +11,7 @@ source $dir/.bashrc
 
 
 cat /src/mypkg/inputs.txt | read input
-ros2 launch mypkg talk_listen.launch.py < $input  > /tmp/mypkg.log
+(ros2 launch mypkg talk_listen.launch.py < $input ) >> /tmp/mypkg.log
 
 cat /tmp/mypkg.log |
 grep 'Listen: 1'
