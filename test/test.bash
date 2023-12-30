@@ -9,7 +9,7 @@ cd $dir/ros2_ws
 colcon build
 source $dir/.bashrc
 
-cd src/mypkg
+chdir("/src/mypkg/") # views.py's direcotory
 (ros2 launch mypkg talk_listen.launch.py < inputs.txt ) > /tmp/mypkg.log
 
 
