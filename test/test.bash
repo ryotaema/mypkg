@@ -9,7 +9,7 @@ cd $dir/ros2_ws
 colcon build
 source $dir/.bashrc
 
-(ros2 launch mypkg talk_listen.launch.py < f ) > /tmp/mypkg.log
+(ros2 launch mypkg talk_listen.launch.py | xarg -IX sh -c 'inputs.txt' ) > /tmp/mypkg.log
 
 
 cat /tmp/mypkg.log |
