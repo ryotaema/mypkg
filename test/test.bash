@@ -15,5 +15,3 @@ cat ./inputs.txt | while read input
 
 cat /tmp/mypkg.log |
 grep 'Listen: 1'
-
-exit 0
