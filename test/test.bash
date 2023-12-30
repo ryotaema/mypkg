@@ -11,9 +11,7 @@ source $dir/.bashrc
 
 cd src/mypkg
 # cat /inputs.txt | while read input
-{(ros2 launch mypkg talk_listen.launch.py < $inputs.txt ) > /tmp/mypkg.log}
-
-cd ../..
+(ros2 launch mypkg talk_listen.launch.py < $inputs.txt ) > /tmp/mypkg.log
 
 cat /tmp/mypkg.log |
 grep 'Listen: 1'
