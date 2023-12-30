@@ -12,7 +12,7 @@ source $dir/.bashrc
 # cd src/mypkg
 while read INPUT
 do
-	(ros2 launch mypkg talk_listen.launch.py < $INPUT ) >/tmp/mypkg.log
+	(ros2 launch mypkg talk_listen.launch.py < $INPUT ) >/../../tmp/mypkg.log
 done < ./inputs.txt 
 
 cat /tmp/mypkg.log |
