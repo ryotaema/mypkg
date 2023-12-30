@@ -15,4 +15,4 @@ cat ./inputs.txt | while read input
 
 
 cat /tmp/mypkg.log |
-grep 'Listen: 4'
+grep 'Listen: 1'
