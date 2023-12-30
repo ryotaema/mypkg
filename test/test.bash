@@ -13,7 +13,7 @@ source $dir/.bashrc
 while read INPUT
 do
 	(ros2 launch mypkg talk_listen.launch.py < $INPUT ) >/../../tmp/mypkg.log
-done < ./inputs.txt 
+done < inputs.txt 
 
 cat /tmp/mypkg.log |
 grep 'Listen: 1'
