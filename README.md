@@ -1,6 +1,6 @@
 # mypkg
 
-[![test]()]()
+[![test](https://github.com/ryotaema/mypkg/actions/workflows/test.yml/badge.svg)](https://github.com/ryotaema/mypkg/actions/workflows/test.yml)
 
 ロボットシステム学2023で使っているリポジトリです。
 
