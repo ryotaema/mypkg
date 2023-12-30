@@ -11,8 +11,8 @@ source $dir/.bashrc
 
 #chdir("/src/mypkg/") # views.py's direcotory
 cd src/mypkg
-(ros2 launch mypkg talk_listen.launch.py < "f" ) > /tmp/mypkg.log
+(ros2 launch mypkg talk_listen.launch.py < `inputs.txt` ) > /tmp/mypkg.log
 
 
 cat /tmp/mypkg.log |
-grep 'Listen: 1'
+grep 'Listen: 4'
