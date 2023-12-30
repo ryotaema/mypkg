@@ -9,11 +9,11 @@ cd $dir/ros2_ws
 colcon build
 source $dir/.bashrc
 
-cd src/mypkg
-while read INPUT
+# cd src/mypkg
+{while read INPUT
 do
 ros2 launch mypkg talk_listen.launch.py < $INPUT 
-done > /tmp/mypkg.log
+done < ./src/mypkg/inputs.txt }> /tmp/mypkg.log
 
 cat /tmp/mypkg.log |
 grep 'Listen: 1'
