@@ -5,7 +5,7 @@
 dir=~
 [ "$1" != "" ] && dir="$1"
 
-cd $dir/ros2_ws
+cd $dir/ros2_ws/src/mypkg
 colcon build
 source $dir/.bashrc
 
@@ -14,7 +14,6 @@ while read INPUT
 do
 	(ros2 launch mypkg talk_listen.launch.py < $INPUT ) >/tmp/mypkg.log
 done < ./inputs.txt 
-# > /tmp/mypkg.log
 
 cat /tmp/mypkg.log |
 grep 'Listen: 1'
