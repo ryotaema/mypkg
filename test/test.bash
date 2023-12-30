@@ -9,9 +9,10 @@ cd $dir/ros2_ws
 colcon build
 source $dir/.bashrc
 
-chdir("/src/mypkg/") # views.py's direcotory
-(ros2 launch mypkg talk_listen.launch.py < inputs.txt ) > /tmp/mypkg.log
+#chdir("/src/mypkg/") # views.py's direcotory
+cd src/mypkg
+(ros2 launch mypkg talk_listen.launch.py < "f" ) > /tmp/mypkg.log
 
 
 cat /tmp/mypkg.log |
-grep 'Listen: 4'
+grep 'Listen: 1'
