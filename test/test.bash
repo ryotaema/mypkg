@@ -6,15 +6,8 @@ dir=~
 [ "$1" != "" ] && dir="$1"
 
 cd $dir/ros2_ws
-# /src/mypkg
 colcon build
-source $dir/.bashrc
-
-# cd src/mypkg
-#while read INPUT
-#do
-#	(ros2 launch mypkg talk_listen.launch.py < "$INPUT" ) >/../../tmp/mypkg.log
-#done < ./inputs.txt 
+source $dir/.bashrc 
 
 timeout 10 ros2 launch mypkg talk_listen.launch.py >../../tmp/mypkg.log
 
