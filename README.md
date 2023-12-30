@@ -3,6 +3,8 @@
 [![test](https://github.com/ryotaema/mypkg/actions/workflows/test.yml/badge.svg)](https://github.com/ryotaema/mypkg/actions/workflows/test.yml)
 
 ロボットシステム学2023で使っているリポジトリです。
+ros2を利用してtalkerから出した信号をlissonerで受信して値を表示します。
+talkerから出る信号は「f」か「j」の入力に応じて変化します。
 
 ## 詳細
 
