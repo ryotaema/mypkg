@@ -14,4 +14,4 @@ cd src/mypkg
 
 
 cat /tmp/mypkg.log |
-grep 'Listen: 1'
+grep 'Listen: 4'
