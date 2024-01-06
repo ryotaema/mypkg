@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: 2023 Ryota Ema <rhenium4694@gmail.com>
+# SPDX-License-Identifier: BSD-3-Clause
+
 import launch
 import launch.actions
 import launch.substitutions
