@@ -20,19 +20,10 @@ talkerから出る信号は「f」か「j」の入力に応じて変化します
 
 ### 使用方法
 
-GitHubとPython、ROS2が利用できる環境で、以下のコマンドでディレクトリを移動してください。
-
-```
-$ cd ros2_ws
-$ cd src
-```
-
 以下のコマンドを入力し、自分の環境にコピーしてください。
 
 ```
-
 $ git clone https://github.com/ryotaema/mypkg.git
-
 ```
 
 以下のコマンドでファイルがダウンロードされていることを確認してください。
@@ -44,12 +35,8 @@ $ ls
 以下のようにコピーしてきたディレクトリに移動し、ビルドしてください。
 
 ```
-
-$ cd ~/ros2_ws
-
 $ colcon build
 $ source ~/.bashrc
-
 ```
 
 ### 実行方法,結果
@@ -57,25 +44,20 @@ $ source ~/.bashrc
 talker.pyとlistener.pyをそれぞれ異なる端末で実行します。
 実行方法とその結果は以下の通りです。
 
-*端末1(talker.py)
+* 端末1(talker.py)
 
 ```
-
-$ cd ~/ros2_ws
 $ ros2 run mypkg talker
 
-$ f
-$ f
-$ j
-$ g
-
+f
+f
+j
+g
 ```
 
-*端末2(listener.py)
+* 端末2(listener.py)
 
 ```
-
-$ cd ~ros2_ws
 $ ros2 run mypkg listener
 
 [INFO] [1703932910.449369287] [listen_node]: Listen: 0
@@ -83,7 +65,6 @@ $ ros2 run mypkg listener
 [INFO] [1703932913.959791715] [listen_node]: Listen: 2
 [INFO] [1703932916.062654816] [listen_node]: Listen: 1
 [INFO] [1703932927.329383762] [listen_node]: Listen: 1
-
 ```
 
 ## 必要なソフトウェア
@@ -91,7 +72,7 @@ $ ros2 run mypkg listener
 * Python
   * テスト済み: 3.7~3.10
 * ros2
-  * ver.humble
+  * humble
 
 ## テスト環境
 
